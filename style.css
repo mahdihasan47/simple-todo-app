@@ -1,0 +1,133 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: animatedBG 20s ease infinite;
+}
+/* Main container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+/* Input section */
+.input-section {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+#taskInput {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+}
+#addBtn {
+    padding: 10px 15px;
+    background-color: #6c5ce7;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+#addBtn:hover {
+      background-color: #5a4ecf;
+}
+/* Task list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: #f1f1f1;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .task-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.2;
+}
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+
+/* for responsive  */
+
+@media (max-width: 480px) {
+    .input-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    #taskInput {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-left {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f0f0;
+  color: #333;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
